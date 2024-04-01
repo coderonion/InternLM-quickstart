@@ -58,3 +58,126 @@
 
 ![](./imgs/003.png)
 
+#### 三、书生·浦语全链条开源开放体系
+
+##### （一）数据：书生·万卷
+
+- 数据集获取方式
+  - [OpenDataLab](https://opendatalab.org.cn/) : 为大模型提供高质量的开放数据集！
+
+- 书生·万卷1.0
+  - 总数据量：2TB
+  - 发布日期：2023年8月14日
+  - 多模态融合
+    - 包含文本、图像、视频等多模态数据
+    - 涵盖科技、文学、媒体、教育和法律等多个领域
+  - 精细化处理
+    - 语言筛选
+    - 文本提取
+    - 格式标准化
+    - 数据过滤和清洗（基于规则和模型）
+    - 多尺度去重和数据质量评估等
+  - 价值观对齐
+    - 数据内容与主流中国价值观进行对齐
+    - 通过算法和人工评估的结合提高语料库的纯净度
+
+- 书生·万卷CC
+
+  - 总数据量：400GB
+
+  - 发布日期：2024年3月6日
+
+  - 三大优势
+    - 时间跨度长：横跨了2013~2023年互联网公开内容
+    - 来源丰富多样
+    - 安全密度高
+  - 高质量语料驱动效率性能双提升
+  - 四重“萃取“高质量数据
+  - 数据质量高、模型更可靠
+
+##### （二）预训练：InterLM-Train
+
+- 并行训练，极致优化速度达到 3600 tokens/sec/gpu
+
+##### （三）微调：XTuner
+
+- 支持全参数微调，支持LoRA等低成本微调
+- 适配多种生态
+  - 多种微调算法，覆盖各类SFT场景
+  - 支持加载HuggingFace、ModelScope模型或数据集
+  - 自动优化加速
+- 适配多种硬件
+  - 训练方案覆盖NVIDIA 20系以上所有显卡
+  - 最低只需8GB显存即可微调7B模型
+
+##### （四）部署：LMDeploy
+
+- LMDeploy提供大模型在GPU上部署的全流程解决方案，包括模型轻量化、推理和服务。
+- 高效推理引擎
+  - 持续批处理技巧
+  - 深度优化的低比特计算kernels
+  - 模型并行
+  - 高效的k/v缓存管理机制
+- 全链路部署，性能领先每秒生成 2000+ tokens
+
+##### （五）评测：OpenCompass
+
+- 2024年1月30日，OpenCompass 2.0司南大模型评测体系 正式发布。
+  - CompassRank：中立全面的性能榜单
+  - CompassKit：大模型评测全栈工具链
+    - 数据污染检查
+    - 更丰富的模型推理接入
+      - 支持近20个商业模型API
+      - 支持LMDeploy、vLLM、LightLLM等推理后端
+    - 长文本能力评测
+    - 中英文双语主观评测
+  - CompassHub：高质量评测基准社区
+- 广泛应用于头部大模型企业和科研机构
+- 获得Meta官方推荐唯一国产大模型评测体系
+- 社区支持最完善的评测体系之一，100+评测集，50万+题目。
+
+##### （六）应用：智能体
+
+- **轻量级智能体框架 Lagent**
+
+  - 支持多种类型的智能体能力
+
+    - ReAct
+    - ReWoo
+    - AutoGPT
+
+    - 灵活支持多种大语言模型
+      - GPT-3.5/4
+      - Hugging Face Transformers
+      - InternLM
+      - Llama
+
+  - 简单易扩展，支持丰富的工具
+    - AI工具
+      - 文生图
+      - 文生语音
+      - 图片描述
+      - ...
+      - 能力拓展
+        - 代码解释器
+        - 计算器
+        - 搜索
+        - ...
+      - Rapid API
+        - 出行API
+        - 财经API
+        - 体育资讯API
+        - ...
+
+- **多模态智能体工具箱 AgentLego**
+
+  - 丰富的工具集合，尤其是提供了大量视觉、多模态相关领域的前沿算法功能。
+  - 支持多个主流智能体系统，如LangChain，Transformers Agent，Lagent等。
+  - 灵活的多模态工具调用接口，可以轻松支持各类输入输出格式的工具函数。
+  - 一键式远程工具部署，轻松使用和调试大模型智能体。
+
+#### 四、参考资料
+
+- bilibili视频：[书生·浦语大模型全链路开源体系](https://www.bilibili.com/video/BV1Vx421X72D)
+
+- [InternLM｜书生·浦语](https://github.com/InternLM/InternLM) <img src="https://img.shields.io/github/stars/InternLM/InternLM?style=social"/> : Official release of InternLM2 7B and 20B base and chat models. 200K context support. [internlm.intern-ai.org.cn/](https://internlm.intern-ai.org.cn/)
